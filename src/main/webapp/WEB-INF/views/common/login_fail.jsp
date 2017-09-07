@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/member.css" />
+<script src="${path.js}/member.js" ></script>
 </head>
 <body>
 <div id="wrapper">
@@ -14,8 +15,8 @@
 	<hr /><br/><br/>
 	</header>
 	<div id="container" align="center">
-	<form action="${ctx}/common.do" method="get">
-		<img src="${ctx}/resources/img/abc.jpg" width=200px; height=200px; alt="" /><br />
+	<form action="${path.ctx}/common.do" method="get">
+		<img src="${path.ctx}/resources/img/abc.jpg" width=200px; height=200px; alt="" /><br />
 		<span class="gms-textcolor-blue gms-inline-block member-span">ID</span>
 		<input type="text" name="id" value="joo" class="input-size" /> <br/>
 		<span class="gms-textcolor-blue gms-inline-block member-span">PASSWORD</span> 
@@ -29,13 +30,16 @@
 		<span class="gms-textcolor-red">아이디나 비밀번호가 다릅니다</span>
 	</form>
 	</div>
+	<script>
+	app.member.init();
+	</script>
 </div>
 		<footer>
 		<div>
 			<p>Posted by: Hege Refsnes</p>
    			<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-			<a href="${ctx}/JDBC_test.jsp">DB연결 테스트</a><br/>
-			<a href="${ctx}/util/update_email.jsp">이메일</a>
+			<a href="${path.ctx}/JDBC_test.jsp">DB연결 테스트</a><br/>
+			<a href="${path.ctx}/util/update_email.jsp">이메일</a>
 		</div>
 	</footer>
 </body>

@@ -14,22 +14,22 @@ public class GradeController {
 
 	@RequestMapping("/grade_add")
 	public String grade_Add() {
-		return "grade/grade_add";
+		return "auth:grade/grade_add.tiles";
 	}
 	@RequestMapping("/grade_detail")
 	public String grade_Detail() {
-		return "grade/grade_detail";
+		return "auth:grade/grade_detail.tiles";
 	}
 	@RequestMapping("/grade_update")
 	public String grade_Update() {
-		return "grade/grade_update";
+		return "auth:grade/grade_update.tiles";
 	}
 	@RequestMapping("/grade_delete")
 	public String grade_Delete() {
-		return "grade/grade_delete";
+		return "auth:grade/grade_delete.tiles";
 	}
 	@RequestMapping("/grade_list")
 	public String grade_List() {
-		return "grade/grade_list";
+		return "auth:grade/grade_list.tiles";
 	}
 }

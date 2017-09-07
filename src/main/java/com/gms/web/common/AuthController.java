@@ -16,7 +16,7 @@ public class AuthController {
 	}
 	@RequestMapping("/login")
 	public String login(){
-		return "public:common/main.tiles";
+		return "auth:common/main.tiles";
 	}
 	
 }
