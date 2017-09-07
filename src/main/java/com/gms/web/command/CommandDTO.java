@@ -1,11 +1,15 @@
 package com.gms.web.command;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
 import com.gms.web.constant.Extension;
 import com.gms.web.constant.Path;
 
 import lombok.Getter;
 import lombok.Setter;
 
+@Lazy @Component
 public class CommandDTO implements Commandable {
 	@Getter
 	protected String action,pageNumber,veiw,search,column;

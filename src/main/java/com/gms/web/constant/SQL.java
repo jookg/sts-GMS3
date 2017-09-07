@@ -1,5 +1,8 @@
 package com.gms.web.constant;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SQL {
 	public static final String MEMBER_INSERT=String.format("insert into %s(%s,%s,%s,%s,%s,%s,%s,%s,%s) values(?,?,?,?,?,?,?,?,now())",DB.TABLE_MEMBER,DB.MEMBER_ID,DB.MEMBER_PW,DB.MEMBER_NAME,DB.MEMBER_SSN,DB.MEMBER_PHONE,DB.MEMBER_EMAIL,DB.MEMBER_MAJOR,DB.MEMBER_PROFILE,DB.MEMBER_REGDATE);
 	public static final String MEMBER_LIST=String.format("select * from %s", DB.TABLE_MEMBER);

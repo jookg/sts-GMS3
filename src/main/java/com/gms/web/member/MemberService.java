@@ -3,8 +3,10 @@ package com.gms.web.member;
 import java.util.List;
 import java.util.Map;
 
-import com.gms.web.command.CommandDTO;
+import org.springframework.stereotype.Component;
 
+import com.gms.web.command.CommandDTO;
+@Component
 public interface MemberService {
 	public String addMember(Map<String,Object> map);
 	public List<?> getMembers(CommandDTO cmd);

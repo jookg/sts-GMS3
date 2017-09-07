@@ -2,6 +2,8 @@ package com.gms.web.board;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+@Repository
 public interface ArticleDAO {
 	public String insert(ArticleDTO bean);
 	public List<ArticleDTO> selectAll();

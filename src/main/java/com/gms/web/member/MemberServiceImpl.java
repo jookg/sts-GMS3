@@ -4,12 +4,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import com.gms.web.command.CommandDTO;
 /*import com.gms.web.domain.MajorBean;
 import com.gms.web.domain.MemberBean;
 import com.gms.web.domain.StudentBean;
 import com.gms.web.service.MemberService;*/
-
+@Service
 public class MemberServiceImpl implements MemberService {
 	Map<String, MemberDTO> map;
 

@@ -1,5 +1,8 @@
 package com.gms.web.proxy;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BlockHandler{
 
    public static int[] attr(PageProxy pxy)  {

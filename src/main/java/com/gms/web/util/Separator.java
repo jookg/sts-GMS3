@@ -3,9 +3,11 @@ package com.gms.web.util;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Component;
+
 import com.gms.web.command.CommandDTO;
 import com.gms.web.complex.CommandFactory;
-
+@Component
 public class Separator {
 	public static CommandDTO cmd=new CommandDTO();
 	public static void init(HttpServletRequest request){

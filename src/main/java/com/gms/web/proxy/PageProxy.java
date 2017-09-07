@@ -4,9 +4,11 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
-@Data
+@Data @Component
 public class PageProxy extends Proxy {
    
    protected int pageSize,blockSize,theNumberOfRows,pageNumber;
