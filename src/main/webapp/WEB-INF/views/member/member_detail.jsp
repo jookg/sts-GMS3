@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-3 col-xs-12 col-sm-6 col-lg-3">
                   <div class="thumbnail text-center photo_view_postion_b" >
-                    <img src="${img}/js.jpg" alt="stack photo" class="img">
+                    <img src="${path.img}/${student.profile}" alt="stack photo" class="img">
                   </div>
                 </div>
                 <div class="col-md-9 col-xs-12 col-sm-6 col-lg-9">
@@ -80,5 +80,5 @@
           </div>
       </div>
       <script>	
-      memberDetail.init();
+      app.member.init();
       </script>

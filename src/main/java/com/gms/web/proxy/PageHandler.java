@@ -6,7 +6,7 @@ import com.gms.web.command.CommandDTO;
 @Component
 public class PageHandler{
 
-   public static CommandDTO attr(PageProxy pxy){
+   public CommandDTO attr(PageProxy pxy){
 	   CommandDTO cmd=new CommandDTO();
       int startRow = 0, endRow =0;
       if(pxy.getPageNumber()<=pxy.getTheNumberOfRows() / pxy.getPageSize() +1){

@@ -13,17 +13,17 @@
 	<a href="../index.html" class="gms-float-right">메인으로 이동하기</a><br/>
 	<hr />
 	<div id="container">
-	<form id="join_box" onsubmit="return join_alert();" >
+	<form id="join_box" >
 			<fieldset>
 				<legend>join information:</legend>
 				<span class="gms-textcolor-blue gms-inline-block member-span">ID</span> 
 				<input type="text" id="id" name="id" placeholder="아이디" /><br /> 
 				<span class="gms-textcolor-blue gms-inline-block member-span">PASSWORD</span> 
-				<input type="text" id="pass" name="pass" placeholder="비밀번호" /><br /> 
+				<input type="text" id="pass" name="pw" placeholder="비밀번호" /><br /> 
 				<span class="gms-textcolor-blue gms-inline-block member-span">NAME</span> 
 				<input type="text" id="name" name="name" placeholder="이름" /><br /> 
 				<span class="gms-textcolor-blue gms-inline-block member-span">생년월일</span> 
-				<input type="date" id="birth" name="birth" placeholder="주민번호" /><br /> 
+				<input type="date" id="birth" name="ssn" placeholder="주민번호" /><br /> 
 				<span class="gms-textcolor-blue gms-inline-block member-span">PHONE</span> 
 				<input type="text" id="phone" name="phone" placeholder="폰번호" /><br /> 
 				<span class="gms-textcolor-blue gms-inline-block member-span">이메일</span>  
@@ -57,35 +57,7 @@
 	</form>
 	</div>
 	<script>
-function join_alert(){
-	var id=document.getElementById("id").value;
-	var pass=document.getElementById("pass").value;
-	var name=document.getElementById("name").value;
-	var birth=document.getElementById("birth").value;
-	if(id===""){
-		alert('아이디 없음');
-		return false;
-	}
-	if(pass===""){
-		alert('비밀번호 다름');
-		return false;
-	}
-	if(name===""){
-		alert('이름 없음');
-		return false;
-	}
-	if(birth===""){
-		alert('생일 입력');
-		return false;
-	}
-	var form=document.getElementById('join_box');
-	//form.setAttribute('action','${ctx}/member.do');
-	//form.setAttribute('method','post');
-	//form.submit();
-	form.method="post";
-	form.action="${ctx}/member.do";
-	return true;
-}
+	app.memberInsert.init();
 	</script>
 	</div>
 	

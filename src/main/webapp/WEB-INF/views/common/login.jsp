@@ -21,7 +21,7 @@
 		<span class="gms-textcolor-blue gms-inline-block member-span">ID</span>
 		<input type="text" id="id" name="id" value="joo" class="input-size" /> <br/>
 		<span class="gms-textcolor-blue gms-inline-block member-span">PASSWORD</span> 
-		<input type="password" id='pass' name="password" value="123" class="input-size" /><br/>
+		<input type="password" id='pass' name="pass" value="123" class="input-size" /><br/>
 		<input type="submit" id="loginBtn" class="gms-bgcolor-blue" value="로그인"/>
 		<input type="reset" class="gms-bgcolor-red" value="취소"/>
 		<input type="hidden" name="action" value="login" />
@@ -30,7 +30,7 @@
 	</form>
 	</div>
 	<script>
-	app.member.init();
+	app.home.init();
 	
 	</script>
 </div>

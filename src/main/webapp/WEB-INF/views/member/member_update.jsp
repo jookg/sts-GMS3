@@ -11,14 +11,14 @@
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
+					<form id="update_stu" class="form-horizontal" >
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">ID</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="id" id="id" placeholder=""/>
+									<input type="text" class="form-control" name="id" id="id" placeholder="" readonly="readonly"/>
 								</div>
 							</div>
 						</div>
@@ -48,7 +48,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password" data-toggle="popover" placeholder="Enter your Password"/>
+									<input type="password" class="form-control" name="pw" id="pw" data-toggle="popover" placeholder="Enter your Password"/>
 								</div>
 								<span id="passwordInfo" class="hide">
 								    <ul>
@@ -74,14 +74,14 @@
 						</div>
 
 						<div class="form-group ">
-							<button id="confirmBtn" type="button" class="btn btn-primary btn-lg btn-block login-button">UPDATE</button>
+							<button id="confirmBtn" type="submit" class="btn btn-primary btn-lg btn-block login-button">UPDATE</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 <script>
-memberUpdate.init();
+app.memberUpdate.init();
 </script>
 
 

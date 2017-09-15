@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BlockHandler{
 
-   public static int[] attr(PageProxy pxy)  {
+   public int[] attr(PageProxy pxy)  {
       int[]result=new int[6];
       int theNumberOfPages=0, startPage=0, endPage=0;
       theNumberOfPages=(pxy.getTheNumberOfRows() % pxy.getPageSize()) ==0? pxy.getTheNumberOfRows()/pxy.getPageSize():pxy.getTheNumberOfRows()/pxy.getPageSize()+1;

@@ -37,7 +37,7 @@
        </ul>
        </li>
      </ul>
-     <span class="gms-textcolor-blue gms-inline-block member-span gms-float-right">${sessionScope.user.name} <a id="logout"> 로그아웃</a></span>
+     <span class="gms-textcolor-blue gms-inline-block member-span gms-float-right">${user.name} <a id="logout"> 로그아웃</a></span>
   <script>
   app.navbar.init();
 /*   function mainLoad(){

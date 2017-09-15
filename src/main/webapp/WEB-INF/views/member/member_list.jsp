@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <h1 class="gms-text-center">회원 목록</h1>
 <a href="${ctx}/index.jsp" class="gms-float-right">메인으로 이동하기</a>
@@ -12,7 +13,7 @@
     <div class="input-group">
       <input type="text" id="search_id" name="search" class="form-control" value="${requestScope.searchn}" placeholder="Search for...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button" onclick="searchStudent('1')">Go!</button>
+        <button class="btn btn-default" type="button" onclick="app.member.searchStudent('1')">Go!</button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
@@ -31,15 +32,15 @@
 		</tr>
 		<c:forEach var="i" items="${requestScope.list}">
 			<tr>
-				<td>${i.no}</td>
+				<td><fmt:formatNumber value="${i.no}" /></td>
 				<td>${i.id}</td>
-				<td><a onclick="detailStudent('${i.id}')"> ${i.name}</a></td>
+				<td><a onclick="app.member.detailStudent('${i.id}')"> ${i.name}</a></td>
 				<td>${i.ssn}</td>
 				<td>${i.phone}</td>
 				<td>${i.email}</td>
 				<td>${i.title}</td>
 				<td>${i.regdate}</td>
-				<td><a onclick="updateStudent('${i.id}')">수정</a>/<a onclick="deleteStudent('${i.id}')">삭제</a></td>
+				<td><a onclick="app.member.updateStudent('${i.id}','${i.name}','${i.phone}','${i.email}')">수정</a>/<a onclick="app.member.deleteStudent('${i.id}')">삭제</a></td>
 			</tr>
 		</c:forEach>
 	</table>
@@ -55,7 +56,7 @@
 			<li class="active"><a>${i.index}</a></li>
 			</c:when>
 			<c:otherwise>
-			<li onclick="searchStudent('${i.index}')"><a>${i.index}</a></li>
+			<li onclick="app.member.list('${i.index}')"><a>${i.index}</a></li>
 			</c:otherwise>
 			</c:choose>
 			</c:forEach>
@@ -66,15 +67,3 @@
 		</ul>
 	</nav>
 </div>
-<script>
-function List(dir,page,num){
-	location.href=app.ctx()+"/"+dir+".do?action=list&page="+page+"&num="+num;
-};
-function searchStudent(num){
-	var search_id=$("#search_id").val();
-	location.href=app.ctx()+"/member.do?action=search&page=member_list&num="+num+"&search_id="+search_id;
-};
- function detailStudent(id){
-	location.href=app.ctx()+"/member.do?action=detail&page=member_detail&id="+id;
-};
-</script>
