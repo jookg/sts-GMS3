@@ -4,6 +4,7 @@
 var app=app || {};
 	app.path=(function(){
 	var init=function(ctx){
+		alert('ab');
 		app.session.init(ctx);
 		//member.init();
 		onCreate();

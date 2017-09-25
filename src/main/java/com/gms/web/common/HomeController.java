@@ -40,7 +40,7 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("path",PathFactory.create());
 		//session.setAttribute("path",PathFactory.create());
-		return "public:common/home.tiles";
+		return "index";
 	}
 	
 }

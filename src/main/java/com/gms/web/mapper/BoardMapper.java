@@ -5,13 +5,14 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.gms.web.board.ArticleDTO;
+import com.gms.web.command.Command;
 @Repository
 public interface BoardMapper {
-	public String insert(ArticleDTO bean);
-	public List<ArticleDTO> selectAll();
-	public List<ArticleDTO> selectById(String id);
-	public ArticleDTO selectBySeq(String seq);
-	public String count();
-	public String update(ArticleDTO bean);
-	public String delete(String seq);
+	public String insert(Command cmd);
+	public List<ArticleDTO> selectAll(Command cmd);
+	public List<ArticleDTO> selectSome(Command cmd);
+	public ArticleDTO selectOne(Command cmd);
+	public String count(Command cmd);
+	public String update(Command cmd);
+	public String delete(Command cmd);
 }

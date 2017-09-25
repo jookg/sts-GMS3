@@ -16,7 +16,7 @@
 	<hr /><br/><br/>
 	</header>
 	<div id="container" align="center">
-	<form id="login_box" name="login_box">
+	<div id="login_box" name="login_box">
 		<img src="${path.ctx}/resources/img/abc.jpg" width=200px; height=200px; alt="" /><br />
 		<span class="gms-textcolor-blue gms-inline-block member-span">ID</span>
 		<input type="text" id="id" name="id" value="joo" class="input-size" /> <br/>
@@ -27,7 +27,7 @@
 		<input type="hidden" name="action" value="login" />
 		<input type="hidden" name="page" value="main" />
 		<input type="button" class="gms-bgcolor-blue" onclick="location.href='${path.ctx}/member.do?action=move&page=member_join'" value="회원가입"/>
-	</form>
+	</div>
 	</div>
 	<script>
 	app.home.init();

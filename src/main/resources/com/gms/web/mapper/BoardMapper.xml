@@ -6,4 +6,26 @@
 	<!--     <select id="selectById" resultType="com.gms.web.board.BoardDTO">
 			select * from Board where article_seq = #{seq}
 		</select> -->
+
+	
+	<select id="selectSome" resultMap="article" parameterType="com.gms.web.command.Command">
+			select * from board
+	</select> 
+	<resultMap type="com.gms.web.command.RespMap" id="RespMap">
+	<id property="Seq" column="seq"/>
+	<result property="id" column="id"/>
+	<result property="title" column="title"/>
+	<result property="content" column="content"/>
+	<result property="hitcount" column="hitcount"/>
+	<result property="regdate" column="regdate"/>
+	</resultMap> 
+	<resultMap type="com.gms.web.board.ArticleDTO" id="article">
+	<id property="articleSeq" column="article_seq"/>
+	<result property="id" column="id"/>
+	<result property="title" column="title"/>
+	<result property="content" column="content"/>
+	<result property="hitcount" column="hitcount"/>
+	<result property="regdate" column="regdate"/>
+	</resultMap> 
+	
 	</mapper>

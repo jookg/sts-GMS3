@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.gms.web.board.ArticleDTO;
+import com.gms.web.grade.GradeDTO;
 import com.gms.web.grade.MajorDTO;
 
 @Repository
 public interface GradeMapper {
 	public int insert(List<MajorDTO> list);
+	public List<GradeDTO> selectAll();
 }
